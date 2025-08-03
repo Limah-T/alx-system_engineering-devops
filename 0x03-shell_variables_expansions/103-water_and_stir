@@ -1,2 +1,2 @@
 #!/bin/bash
-echo b
+n=$(echo $WATER|tr 'water' 01234) m=$(echo $STIR|tr 'stir.' 0123456) a=bestchol s=$((n+m)) r=; while [ $s -gt 0 ]; do d=$((s%8)); r=${a:$d:1}$r; s=$((s/8)); done; [ -z "$r" ] && echo b || echo $r
