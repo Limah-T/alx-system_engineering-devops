@@ -1,14 +1,4 @@
 #!/bin/bash
-i=a
-while [ $i != aa ]
-do
-j=a
-while [ $j != aa ]
-do
-[ $i$j != oo ] && echo $i$j
-j=$(echo $j | tr a-z b-za)
-done
-i=$(echo $i | tr a-z b-za)
-done
+for i in {a..z}; do for j in {a..z}; do if [ $i$j != oo ]; then echo $i$j; fi; done; done
 
 
