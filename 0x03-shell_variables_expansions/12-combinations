@@ -1,12 +1,14 @@
 #!/bin/bash
-for i in {a..z}
+i=a
+while [ $i != aa ]
 do
-for j in {a..z}
+j=a
+while [ $j != aa ]
 do
-if test $i$j != oo
-then
-echo $i$j
-fi
+[ $i$j != oo ] && echo $i$j
+j=$(echo $j | tr a-z b-za)
 done
+i=$(echo $i | tr a-z b-za)
 done
+
 
